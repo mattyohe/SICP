@@ -13,3 +13,16 @@
 (f 7)
 (f 8)
 
+;; f(n-1) + 2f(n-2) + 3f(n-3) if  n>=3
+
+(define (iter a b c count)
+    (if (= count 0)
+        a
+        (iter b c (+ c (* 2 b) (* 3 a)) (- count 1 ))))
+
+(iter 0 1 2 4)
+(iter 0 1 2 5)
+(iter 0 1 2 6)
+(iter 0 1 2 7)
+(iter 0 1 2 8)
+
